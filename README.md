@@ -1,5 +1,20 @@
 # Benchmark
 
+# To execute
+
+```bash
+mvn clean compile -P logback exec:java -DLOG_LEVEL=INFO -DAPPENDER=STDOUT
+mvn clean compile -P logback exec:java -DLOG_LEVEL=DEBUG -DAPPENDER=STDOUT
+mvn clean compile -P logback exec:java -DLOG_LEVEL=INFO -DAPPENDER=FILE
+mvn clean compile -P logback exec:java -DLOG_LEVEL=DEBUG -DAPPENDER=FILE
+
+mvn clean compile -P log4j exec:java -DLOG_LEVEL=info -DAPPENDER=stdout
+mvn clean compile -P log4j exec:java -DLOG_LEVEL=debug -DAPPENDER=stdout
+mvn clean compile -P log4j exec:java -DLOG_LEVEL=info -DAPPENDER=file
+mvn clean compile -P log4j exec:java -DLOG_LEVEL=debug -DAPPENDER=file
+```
+
+
 # Logback
 
 | Level | Appender | Time | op/μs |
